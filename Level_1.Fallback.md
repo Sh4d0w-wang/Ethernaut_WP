@@ -75,18 +75,7 @@ contract Fallback {
 1. 贡献一次；
 2. 调用` receive() `函数,并且` msg.data `要为空；
 
-> 触发fallback() 还是 receive()?
->         接收ETH
->            |
->       msg.data是空？
->          /  \
->        是    否
->        /      \
-> receive()存在?   fallback()
->      / \
->     是  否
->    /     \
-> receive()   fallback()
+![image-20250306215933134](./assets/image-20250306215933134.png)
 
 3. 当成为` owner `后，调用` withdraw() `取出所有余额；
 
